@@ -45,7 +45,7 @@ print(confusion_matrix(y_test, y_pred_lr))
 print(classification_report(y_test, y_pred_lr))
 print("F1 Score:", f1_score(y_test, y_pred_lr))
 
-rf = RandomForestClassifier(random_state=42) # it is used to fit the random ness
+rf = RandomForestClassifier(random_state=42) #  42 it is used to fit the random ness
 rf.fit(X_train, y_train)
 y_pred_rf = rf.predict(X_test)
 y_prob_rf = rf.predict_proba(X_test)[:,1]
@@ -81,3 +81,4 @@ plt.title("Feature Importance")
 plt.tight_layout()
 plt.savefig("feature_importance.png")
 plt.show()
+
